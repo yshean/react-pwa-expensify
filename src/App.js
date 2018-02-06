@@ -7,15 +7,9 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     // this.handlePick = this.handlePick.bind(this);
-    this.state = {
-
-    };
+    this.state = {};
   }
   render() {
-    return (
-      <div>
-        This is my boilerplate.
-      </div>
-    );
+    return <div>This is my boilerplate.</div>;
   }
 }
