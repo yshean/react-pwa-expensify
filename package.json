@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "firebase": "^4.9.1",
     "flow-bin": "^0.64.0",
     "history": "^4.7.2",

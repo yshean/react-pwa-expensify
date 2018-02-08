@@ -57,11 +57,11 @@ export default class ExpenseForm extends React.Component {
   };
   render() {
     return (
-      <div>
-        { this.state.errorMessage && <p>{this.state.errorMessage}</p> }
-        <form onSubmit={this.onSubmit}>
+        <form className="form" onSubmit={this.onSubmit}>
+          { this.state.errorMessage && <p className="form__error">{this.state.errorMessage}</p> }
           <input 
             type="text" 
+            className="text-input"
             placeholder="Description" 
             value={this.state.description} 
             onChange={this.onDescriptionChange} 
@@ -69,11 +69,12 @@ export default class ExpenseForm extends React.Component {
           />
           <input 
             type="text"
+            className="text-input"
             placeholder="Amount"
             value={this.state.amount}
             onChange={this.onAmountChange}
           />
-          <SingleDatePicker 
+          <SingleDatePicker
             date={this.state.createdAt}
             onDateChange={this.onDateChange}
             focused={this.state.calendarFocused}
@@ -81,14 +82,16 @@ export default class ExpenseForm extends React.Component {
             numberOfMonths={1}
             isOutsideRange={() => false}
           />
-          <textarea 
+          <textarea
+            className="textarea" 
             placeholder="Add a note for your expense (optional)"
             value={this.state.note}
             onChange={this.onNoteChange}
           />
-          <button>Add Expense</button>
+          <div>
+            <button className="button">Save Expense</button>
+          </div>
         </form>
-      </div>
     );
   }
 }

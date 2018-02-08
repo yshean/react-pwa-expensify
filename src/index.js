@@ -10,6 +10,7 @@ import "normalize.css/normalize.css";
 import "./styles/styles.css";
 import registerServiceWorker from "./registerServiceWorker";
 import { firebase } from "./firebase/firebase";
+import LoadingPage from "./components/LoadingPage";
 
 const store = configureStore();
 
@@ -33,7 +34,7 @@ const renderApp = () => {
   }
 };
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById("root"));
+ReactDOM.render(<LoadingPage />, document.getElementById("root"));
 
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
